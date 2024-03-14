@@ -1,64 +1,110 @@
+/* styles.css */
+
+/* Estilos para el contenedor de la imagen */
+
 * {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body{
+body {
     width: 100vw;
     height: 100vh;
     background-color: rgb(240,233,221);
-    display: grid;
-    grid-template-columns: auto 1fr auto; 
-    grid-template-rows: auto 1fr; 
 }
-
-.headerPrinc{
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    height: 90px;
-}
-
-.one{
-    grid-column: 1; 
-    grid-row: 2;
-    width: 100%;
-}
-
-.content{
-    display: flex;
-    height: 20%;
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content:flex-end;
-}
-
-.content .cTitle {
+.image-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     position: relative;
-    font-size: 30px;
-    margin-left: 30px;   
+    height: 100vh;
+    overflow: hidden;
 }
 
-.content{
-    margin-left: 30px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    height: 20%;
+/* Estilos para la imagen de fondo */
+.background-image {
+    width: 100%;
+    height: auto;
+}
 
-    display:flex;
-    flex-direction: column;
+/* Estilos para el texto superpuesto */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black; /* Cambiado a color negro */
+}
+
+.headline {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilos para los enlaces */
+.learn-more {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 24rem;
+}
+
+/* Estilos para el menú */
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: rgb(33,33,33);
+    border-radius: 10px;
+    width: 600px;
+    height: 50px;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
+    color: rgb(240,233,221);
+    
 }
 
-.cText{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-right: 100px;
-    margin-left: 30px;
-    font-size: 15px;
+.menu ul{
+    display: flex;
+    list-style: none;
+    margin-left: 110px;
+    margin-right: 20px;
+}
+
+.menu ul li{
+    margin-left: 20px;
+    font-size: 17px;
+}
+
+.menu ul li:hover{
+    cursor: pointer;
+    background-color: rgb(240,233,221);
+    color:rgb(33, 33, 33);
+
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
 .BBlack{
@@ -66,11 +112,11 @@ body{
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(33,33,33);
-    color: rgb(240,233,221);
+    background-color: black; /* Same color as the body */
+    border: 1px solid rgb(33, 33, 33);
+    color: white;
     font-size: 20px;
     width: 280px;
-    border: none;
 }
 
 .BWhite{
@@ -84,56 +130,4 @@ body{
     font-size: 20px;
     width: 280px;
 
-}
-
-.imagen {
-    height: 100%;
-    width: 100%;
-    grid-column: 3;
-    grid-row: 1 / span 3;
-}
-
-.headerNv{
-    display: flex;
-    margin-top: 30px;
-    margin-left: 30px;
-    background-color: rgb(33,33,33);
-    border-radius: 10px;
-    width: 600px;
-    height: 50px;
-    justify-content: space-between;
-    align-items: center;
-    color: rgb(240,233,221);
-}
-
-.headerNv h1{
-    margin-left: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.headerNv  ul{
-    display: flex;
-    list-style: none;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.headerNv ul li{
-    margin-left: 20px;
-    font-size: 17px;
-}
-
-.headerNv ul li:hover{
-    cursor: pointer;
-    background-color: rgb(240,233,221);
-    color:rgb(33, 33, 33);
-
-}
-
-.imagen img{
-    margin:29px;
-    width: 93%;
-    height: 93.5%;
-    border-radius: 15px;
 }
