@@ -23,7 +23,6 @@ body {
     grid-column: 1;
     grid-row: 2;
     width: 100%;
-    display: flex;
 }
 
 .content {
@@ -34,66 +33,22 @@ body {
     justify-content: flex-end;
 }
 
-.Bix {
-    margin-left: 30px;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: rgb(244, 214, 76);
-    padding: 9px;
-    border-radius: 10px;
-}
-
 .content .Ctitle {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-size: 30px;
-    margin-left: 30px;
-}
-
-.Ctext {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-right: 100px;
-    margin-left: 30px;
-    font-size: 15px;
-}
-
-.BBlack,
-.BWhite {
-    display: inline-block;
-    margin-left: 15px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-radius: 10px;
     font-size: 20px;
-    width: 140px;
-    text-align: center;
+    margin-left: 30px;
+    top: -5%;
+    
 }
 
-.BBlack {
-    background-color: rgb(33, 33, 33);
-    border: 1px solid rgb(33, 33, 33);
-    color: rgb(240, 233, 221);
-}
+.content .Ctitle p {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 50px;
 
-.BWhite {
-    background-color: rgb(240, 233, 221);
-    border: 1px solid rgb(33, 33, 33);
-    color: rgb(33, 33, 33);
-}
-
-.BBlack a,
-.BWhite a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.three {
-    height: 100%;
-    width: 100%;
-    grid-column: 3;
-    grid-row: 1 / span 3;
 }
 
 .headerNv {
@@ -115,11 +70,6 @@ body {
     font-weight: bold;
 }
 
-.headerNv h1 a {
-    text-decoration: none;
-    color: rgb(240, 233, 221);
-}
-
 .headerNv ul {
     display: flex;
     list-style: none;
@@ -138,9 +88,69 @@ body {
     color: rgb(33, 33, 33);
 }
 
+.three {
+    height: 100%;
+    width: 100%;
+    grid-column: 3;
+    grid-row: 1 / span 3;
+    position: relative; /* Set position to relative to allow absolute positioning inside it */
+}
+
 .three img {
     margin: 29px;
     width: 93%;
     height: 93.5%;
     border-radius: 15px;
+}
+
+.Bix {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(244, 214, 76);
+    padding: 9px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1; /* Make sure it's on top of other elements */
+    top: 30px; /* Adjust the top position as needed */
+    left: 30px; /* Adjust the left position as needed */
+}
+
+.location {
+    width: 87%;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.location a {
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .content .Ctitle p {
+        margin-left: 30px;
+    }
+    
+    .location {
+        width: 100%;
+        left: 0;
+        transform: none;
+        padding: 0 20px;
+        bottom: 30px;
+    }
+}
+
+.headerNv h1 a{
+    text-decoration: none;
+    color: rgb(240, 233, 221);   
 }
